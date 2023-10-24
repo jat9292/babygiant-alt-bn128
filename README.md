@@ -78,7 +78,7 @@ pub fn do_compute_dlog(x: &str, y: &str, num_threads: u64) -> u64
 This function will compute the Discrete Logarithm of a point on the Baby Jubjub curve, in Twisted Edwards form.
 The embedded plaintext should be a `u40` (i.e an unsigned integer smaller than `1099511627775`) or else the program will not find a valid discrete logarithm and panic.
 
-`x` and `y` are strings representing coordinates of the embedded plaintext and should have the same format as the values returned by the `exp_elgamal_decrypt` in the `noir-elgamal` package, i.e  `x` and `y` should be hexadecimal strings representing two bytes of size 32 at most. 
+`x` and `y` are strings representing coordinates of the embedded plaintext and should have the same format as the values returned by the `exp_elgamal_decrypt` in the `noir-elgamal` package, i.e  `x` and `y` should be hexadecimal strings representing two bytes arrays of size `32` at most. 
 Eg of valid inputs: `x="0xbb77a6ad63e739b4eacb2e09d6277c12ab8d8010534e0b62893f3f6bb957051"` and `y="0x25797203f7a0b24925572e1cd16bf9edfce0051fb9e133774b3c257a872d7d8b"`.
 Keep also in mind that if `(x,y)` is not a valid point on the Baby Jubjub curve in Twisted Edwards form, the program will panic.
 
