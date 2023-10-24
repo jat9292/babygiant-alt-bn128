@@ -67,7 +67,7 @@ Two main differences with respect to zkay :
 allowing to decrypt  `u40` instead of just `u32` in less than 6 seconds (on a Mac M1 chip), this is why we replaced the max_bitwidth argument from `32` to `40` in the `baby_giant` call.
 Even in the browser (see the accompanying [npm package](https://github.com/jat9292/babyjubjub-utils)), it is now practical to decrypt a `u40` in less than 9s in the worst case (WASM overhead) when using a `num_threads` between `5` and `8`.
 
-2/ Another big difference is that the imported arkworks library uses the Edwards form instead of the Twisted Edwards form which is used in Noir for the baby Jubjub curve, so we did a coordinate transform to encode points in the Twisted Edwards form instead of the Edwards form, for using the same format as the Noir implementation. 
+2/ Another big difference is that the imported arkworks library uses the Edwards form instead of the Twisted Edwards form which is used in Noir for the Baby Jubjub curve, so we did a coordinate transform to encode points in the Twisted Edwards form instead of the Edwards form, for using the same format as the Noir implementation. 
 
 Here is the function signature :
 
