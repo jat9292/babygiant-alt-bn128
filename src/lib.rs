@@ -5,8 +5,8 @@ Two main differences with respect to zkay :
 1/ we replaced scalar multiplication inside the baby steps loop by point addition, this lead to a 7x speedup on average, as well as multithreading for another 2.5x improvement
 allowing to decrypt  u40 instead of just u32 in less than 6.5 seconds (on a Mac M1 chip), this is why we replaced the max_bitwidth argument from 32 to 40 in the baby_giant call.
 Even in the browser this should be practical for uint40 in less than 9s in the worst case (WASM overhead) when using num_threads=8.
-2/ Another big difference is that the imported arkworks library uses the Edwards form instead of the Twisted Edwards form which is used in Noir for the baby Jubjub curve, 
-so we did a coordinate transform when encoding points on the Edwards form, using the coordinates given by the Noir implementation. 
+2/ 2/ Another big difference is that the imported arkworks library uses the Edwards form instead of the Twisted Edwards form which is used in Noir for the baby Jubjub curve, 
+so we did a coordinate transform to encode points in the Twisted Edwards form instead of the Edwards form, for using the same format as the Noir implementation. 
 */
 
 use ark_ed_on_bn254::{EdwardsAffine as BabyJubJub, Fr, Fq, EdwardsParameters};
