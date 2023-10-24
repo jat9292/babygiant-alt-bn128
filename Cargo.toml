@@ -1,0 +1,15 @@
+[package]
+name = "babygiant-alt-bn128"
+version = "0.1.0"
+edition = "2021"
+authors = ["jat9292"]
+license = "MIT OR Apache-2.0"
+rust-version = "1.73.0"
+
+[dependencies]
+ark-ff = "0.2.0"
+ark-ec = "0.2.0"
+ark-ed-on-bn254 = "0.2.0"
+ark-std = "0.2.0"
+hex = "0.4.3"
+regex = "1.10.2"
