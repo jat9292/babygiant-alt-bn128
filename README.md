@@ -4,6 +4,8 @@ This is an accompanying crate for the Noir package [noir-elgamal](https://github
 
 Please refer to the accompanying [npm package](https://github.com/jat9292/babyjubjub-utils) if you want to use a WASM version of this algorithm in a front-end.
 
+⚠️ **Warning:** the current implementation is vulnerable to timing attacks, as the running time depends on the input. Please keep this in mind and exercise extra caution if you wish to use it in production.
+
 ## How to use
 First, decrypt a point in embedded form using the `exp_elgamal_decrypt` function from [noir-elgamal](https://github.com/jat9292/noir-elgamal).
 
