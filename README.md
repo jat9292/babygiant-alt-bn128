@@ -1,5 +1,5 @@
 # babygiant-alt-bn128
-A Rust crate implementing a multi-threaded version of the baby-step giant-step algorithm on the Baby Jubjub curve (alt-bn128) to decrypt u40 integers.
+A Rust crate implementing a multi-threaded version of the baby-step giant-step algorithm on the Baby Jubjub curve (curve inside alt-bn128) to decrypt u40 integers.
 This is an accompanying crate for the Noir package [noir-elgamal](https://github.com/jat9292/noir-elgamal).
 
 Please refer to the accompanying [npm package](https://github.com/jat9292/babyjubjub-utils) if you want to use a WASM version of this algorithm in a front-end.
