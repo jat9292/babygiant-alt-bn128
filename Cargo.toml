@@ -1,10 +1,10 @@
 [package]
 name = "babygiant-alt-bn128"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["jat9292"]
 license = "MIT"
-description= "A Rust crate implementing a multi-threaded version of the baby-step giant-step algorithm on the Baby Jubjub curve (alt-bn128) to decrypt u40 integers. This is an accompanying crate for the Noir package noir-elgamal."
+description= "A Rust crate implementing a multi-threaded version of the baby-step giant-step algorithm on the Baby Jubjub curve (it is the curve whose base field is the scalar field of alt-bn-128 aka bn254) to decrypt u40 integers. This is an accompanying crate for the Noir package noir-elgamal."
 rust-version = "1.73.0"
 
 [dependencies]
